@@ -1,0 +1,9 @@
+E:\Git\Code\Models\bin\Debug\Models.dll
+E:\Git\Code\Models\bin\Debug\Models.pdb
+E:\Git\Code\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+E:\Git\Code\Models\obj\Debug\Models.dll
+E:\Git\Code\Models\obj\Debug\Models.pdb
+E:\Git\Fang\Models\bin\Debug\Models.dll
+E:\Git\Fang\Models\bin\Debug\Models.pdb
+E:\Git\Fang\Models\obj\Debug\Models.dll
+E:\Git\Fang\Models\obj\Debug\Models.pdb

@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jQuery图像照片剪裁插件Jcrop</title>
+    <link rel="shortcut icon" href="http://www.zhangxinxu.com/zxx_ico.png" />
+    <link href="/Theme/js/uploadify/jquery.Jcrop.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Theme/js/uploadify/jquery.Jcrop.js"></script>
+    <style type="text/css">
+    .img_pos {
+        padding: 20px;
+        font-family: Verdana, Geneva, sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+    <script type="text/javascript">
+        
+
+        $(document).ready(function () {
+            //记得放在jQuery(window).load(...)内调用，否则Jcrop无法正确初始化
+            //加载剪裁图片
+            //aspectRatio   0=自由剪裁  1=等比例剪裁 
+            $("#xuwanting").attr("src", $("#img_url").val());
+            $("#xuwanting").hide();
+            $("#xuwanting").show();
+            $("#xuwanting").Jcrop({
+                onChange: showCoords,
+                onSelect: showCoords,
+                aspectRatio: 1
+            });
+            //简单的事件处理程序，响应自onChange,onSelect事件，按照上面的Jcrop调用
+            function showCoords(obj) {
+                $("#x1").val(obj.x);
+                $("#y1").val(obj.y);
+                $("#x2").val(obj.x2);
+                $("#y2").val(obj.y2);
+                $("#w").val(obj.w);
+                $("#h").val(obj.h);
+            }
+        });
+        //确认剪裁  保存数据
+        function cut_img() {
+            var date = new Date();
+            this.url = "/UserCenter/Service/ImgHelp.ashx?action=cutoutImg&t=";
+            $.get(this.url + date.getMilliseconds(),
+            {
+                "img": $("#img_url").val(),
+                "x": $("#x1").val(),
+                "y": $("#y1").val(),
+                "w": $("#w").val(),
+                "h": $("#h").val()
+            }
+            , function (data) {
+                if (data != "0") {
+                    //剪裁成功  显示图片
+                    //$("#newimg").attr("src", data);
+                    $("#logoImg").attr("src", data);
+                    $("#hideImg").val(data);//隐藏域路径
+                    $(".user_login_le,.pop_bg").hide();
+                    $("#xuwanting").unbind();
+
+                    
+                } else {
+                    ShowMsg("裁剪失败");
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="img_pos" style="margin-bottom:20px;">
+        <img id="xuwanting" src="" />
+        <img id="img" src="" style="display:none;" />
+        <br />
+        <form>
+        <!--<b>x1</b>--><input readonly="readonly" type="hidden" size="4" id="x1" />
+        <!--<b class="ml5">y1</b>--><input type="hidden" readonly="readonly" size="4" id="y1" />
+        <!--<b class="ml5">x2</b>--><input type="hidden" readonly="readonly" size="4" id="x2" />
+        <!--<b class="ml5">y2</b>--><input type="hidden" readonly="readonly" size="4" id="y2" />
+        <!--<b class="ml5">w</b>--><input type="hidden" readonly="readonly" size="4" id="w" />
+        <!--<b class="ml5">h</b>--><input type="hidden" readonly="readonly" size="4" id="h" />
+        <input type="button" value="确定" onclick="cut_img()" />
+        </form>
+    </div>
+</body>
+</html>

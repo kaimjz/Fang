@@ -1,0 +1,214 @@
+﻿/*
+div.pager
+{
+    text-align: right;
+    clear: both;
+    font-size: 12px;
+    padding-bottom: 3px;
+    margin: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 3px;
+    line-height:30px;
+    font-size:14px;
+}
+div.pager A
+{
+    border-bottom: #fc5859 1px solid;
+    border-left: #fc5859 1px solid;
+    padding-bottom: 2px;
+    margin: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #000;
+    border-top: #fc5859 1px solid;
+    border-right: #fc5859 1px solid;
+    text-decoration: none;
+    padding-top: 2px;
+}
+div.pager A:hover
+{
+    border-bottom: #000099 1px solid;
+    border-left: #000099 1px solid;
+    color: #000;
+    border-top: #000099 1px solid;
+    border-right: #000099 1px solid;
+}
+div.pager A:active
+{
+    border-bottom: #000099 1px solid;
+    border-left: #000099 1px solid;
+    color: #000;
+    border-top: #000099 1px solid;
+    border-right: #000099 1px solid;
+}
+div.pager SPAN.current
+{
+    border-bottom: #000099 1px solid;
+    border-left: #000099 1px solid;
+    padding-bottom: 2px;
+    background-color: #000099;
+    margin: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #fff;
+    border-top: #000099 1px solid;
+    font-weight: bold;
+    border-right: #000099 1px solid;
+    padding-top: 2px;
+}
+div.pager SPAN.disabled
+{
+    border-bottom: #fc5859 1px solid;
+    font-size: 14px;
+    border-left: #fc5859 1px solid;
+    padding-bottom: 2px;
+    margin: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #9f9696;
+    border-top: #fc5859 1px solid;
+    border-right: #fc5859 1px solid;
+    padding-top: 2px;
+}
+div.pager SPAN.abled
+{
+    border-bottom: #fc5859 1px solid;
+    font-size: 14px;
+    border-left: #fc5859 1px solid;
+    padding-bottom: 2px;
+    margin: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #fc5859;
+    border-top: #fc5859 1px solid;
+    border-right: #fc5859 1px solid;
+    padding-top: 2px;
+}
+
+#P_First, #P_Last, #P_Prev, #P_Next, #P_GO, #S_First, #S_Last, #S_Prev, #S_Next
+{
+    border: #000099 0px solid;
+}
+#S_First:hover, #S_Last:hover, #S_Prev:hover, #S_Next:hover
+{
+    color: #0da4dc;
+}
+#P_GO
+{
+    text-align: center;
+    font-size: 14px;
+    height: 40px;
+    width: 50px;
+    background-color: #45c5f6;
+    color: #056598;
+}
+#P_GO:hover
+{
+    text-align: center;
+    font-size: 14px;
+    height: 40px;
+    width: 50px;
+    background-color: #0da4dc;
+    color: #fff;
+}
+*/
+div.pager
+{
+    /*text-align: right;*/
+    clear: both;
+    font-size: 14px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+div.pager A
+{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    color: #000;
+    text-decoration: none;
+    cursor:pointer !important;
+    margin-left:2px;
+}
+div.pager A:hover
+{
+    color: #FFFFFF;
+    background-color: #fc5859;
+}
+div.pager A:active
+{
+    color: #FFFFFF;
+    background-color: #fc5859;
+}
+
+#nnow
+{
+    background-color: #fc5859;
+}
+
+div.pager SPAN.current
+{
+    padding-bottom: 4px;
+    background-color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #fff;
+    font-weight: bold;
+    padding-top: 4px;
+}
+div.pager SPAN.disabled
+{
+    font-size: 14px;
+    padding-bottom: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 4px;
+    cursor:pointer !important;
+}
+div.pager SPAN.abled
+{
+    font-size: 14px;
+    padding-bottom: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #fc5859;
+    padding-top: 4px;
+}
+
+#P_First, #P_Last, #P_Prev, #P_Next, #P_GO, #S_First, #S_Last, #S_Prev, #S_Next
+{
+    color: #000;
+    border: #000099 0px solid;
+}
+#S_First:hover, #S_Last:hover, #S_Prev:hover, #S_Next:hover
+{
+    font-size:10;
+    color: #FFFFFF;
+    background-color: #fc5859;
+}
+#P_GO
+{
+    text-align: center;
+    font-size: 12px;
+    height: 40px;
+    width: 50px;
+    background-color: #fc5859;
+    color: #fff;
+    padding:3px;
+}
+#P_GO:hover
+{
+    text-align: center;
+    font-size: 12px;
+    height: 40px;
+    width: 50px;
+    background-color: #fc5859;
+    color: #27CDB4;
+    padding:3px;
+}
+#Txt_GO {
+    width:25px;
+}

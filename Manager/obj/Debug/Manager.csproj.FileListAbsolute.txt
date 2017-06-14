@@ -1,0 +1,17 @@
+E:\Git\Fang\Manager\bin\Manager.dll.config
+E:\Git\Fang\Manager\bin\Manager.dll
+E:\Git\Fang\Manager\bin\Manager.pdb
+E:\Git\Fang\Manager\bin\BLL.dll
+E:\Git\Fang\Manager\bin\Commons.dll
+E:\Git\Fang\Manager\bin\Models.dll
+E:\Git\Fang\Manager\bin\Newtonsoft.Json.dll
+E:\Git\Fang\Manager\bin\DAL.dll
+E:\Git\Fang\Manager\bin\DBUtility.dll
+E:\Git\Fang\Manager\bin\BLL.pdb
+E:\Git\Fang\Manager\bin\Commons.pdb
+E:\Git\Fang\Manager\bin\Models.pdb
+E:\Git\Fang\Manager\bin\DAL.pdb
+E:\Git\Fang\Manager\bin\DBUtility.pdb
+E:\Git\Fang\Manager\obj\Debug\Manager.csprojResolveAssemblyReference.cache
+E:\Git\Fang\Manager\obj\Debug\Manager.dll
+E:\Git\Fang\Manager\obj\Debug\Manager.pdb

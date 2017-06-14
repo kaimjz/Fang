@@ -1,0 +1,1200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ACF0F093-337A-4598-B6A5-D0B5F3528A91}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Manager</RootNamespace>
+    <AssemblyName>Manager</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SiteManager\js\AdvManager.js" />
+    <Content Include="SiteManager\js\BaseDict.js" />
+    <Content Include="SiteManager\js\CmtSwcomment.js" />
+    <Content Include="SiteManager\js\CommentManager.js" />
+    <Content Include="SiteManager\js\FriendshipLink.js" />
+    <Content Include="SiteManager\js\InviteCode.js" />
+    <Content Include="SiteManager\js\LeaderCmtManager.js" />
+    <Content Include="SiteManager\js\LogManager.js" />
+    <Content Include="SiteManager\js\NewEdit.js" />
+    <Content Include="SiteManager\js\NewsManager.js" />
+    <Content Include="SiteManager\js\OperatingManager.js" />
+    <Content Include="SiteManager\js\SearchWordManager.js" />
+    <Content Include="SiteManager\js\SensitiveWordManager.js" />
+    <Content Include="SiteManager\js\UserManager.js" />
+    <Content Include="SiteManager\js\WeChatUserManager.js" />
+    <Content Include="SiteManager\NewsEdit.aspx" />
+    <Content Include="SiteManager\Service\UserManager.ashx" />
+    <Content Include="Theme\images\.inf_btdown" />
+    <Content Include="Theme\js\jscop\css\Thumbs.db" />
+    <Content Include="Theme\js\UEditor\net\config.json" />
+    <Content Include="Theme\js\UEditor\net\controller.ashx" />
+    <Content Include="Theme\js\UEditor\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Theme\js\UEditor\obj\Debug\UEditor.csprojResolveAssemblyReference.cache" />
+    <Content Include="Theme\js\UEditor\third-party\jquery-1.10.2.min.map" />
+    <Content Include="Theme\js\UEditor\third-party\video-js\font\vjs.eot" />
+    <Content Include="Theme\js\UEditor\third-party\video-js\font\vjs.ttf" />
+    <Content Include="Theme\js\UEditor\third-party\video-js\font\vjs.woff" />
+    <Content Include="Theme\zTree\css\awesomeStyle\awesome.less" />
+    <Content Include="Theme\zTree\css\awesomeStyle\fa.less" />
+    <Content Include="Theme\ExcelModel\SendBook.xls" />
+    <Content Include="Theme\ExcelModel\SensWord.xlsx" />
+    <Content Include="Theme\ExcelModel\用户导入.xlsx" />
+    <Content Include="SiteManager\Service\NewsManager.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Index.aspx" />
+    <Content Include="index_bg.html" />
+    <Content Include="Login.aspx" />
+    <Content Include="Theme\CarouselImg\css\galleryview.css" />
+    <Content Include="Theme\CarouselImg\js\jquery-1.4.min.js" />
+    <Content Include="Theme\CarouselImg\js\jquery.easing.1.3.js" />
+    <Content Include="Theme\CarouselImg\js\jquery.galleryview-1.1.js" />
+    <Content Include="Theme\CarouselImg\js\jquery.timers-1.1.2.js" />
+    <Content Include="Theme\CarouselImg\js\light\next.png" />
+    <Content Include="Theme\CarouselImg\js\light\pointer.png" />
+    <Content Include="Theme\CarouselImg\js\light\prev.png" />
+    <Content Include="Theme\colorpicker\css\jquery.bigcolorpicker.css" />
+    <Content Include="Theme\colorpicker\images\big_bgcolor.jpg" />
+    <Content Include="Theme\colorpicker\js\jquery.bigcolorpicker.min.js" />
+    <Content Include="Theme\css\login_css.css" />
+    <Content Include="Theme\css\new.css" />
+    <Content Include="Theme\css\new2.css" />
+    <Content Include="Theme\css\smart.css" />
+    <Content Include="Theme\css\smart2.css" />
+    <Content Include="Theme\images\012.gif" />
+    <Content Include="Theme\images\a1.png" />
+    <Content Include="Theme\images\a2.png" />
+    <Content Include="Theme\images\a3.png" />
+    <Content Include="Theme\images\add_banner.png" />
+    <Content Include="Theme\images\Audio_buttun.png" />
+    <Content Include="Theme\images\Audio_radio1.png" />
+    <Content Include="Theme\images\audit.png" />
+    <Content Include="Theme\images\audit_btn.png" />
+    <Content Include="Theme\images\audit_img.png" />
+    <Content Include="Theme\images\audit_img2.png" />
+    <Content Include="Theme\images\banner.png" />
+    <Content Include="Theme\images\banner_bt.png" />
+    <Content Include="Theme\images\bookshop_tit4.png" />
+    <Content Include="Theme\images\bookshop_xianshi.png" />
+    <Content Include="Theme\images\Chorm_logo.png" />
+    <Content Include="Theme\images\dabk_bt.png" />
+    <Content Include="Theme\images\dabk_bt2.png" />
+    <Content Include="Theme\images\dian.png" />
+    <Content Include="Theme\images\douban.png" />
+    <Content Include="Theme\images\exclusive.png" />
+    <Content Include="Theme\images\fenye.png" />
+    <Content Include="Theme\images\Firfoxs_logo.png" />
+    <Content Include="Theme\images\found-reading-img1.png" />
+    <Content Include="Theme\images\found-reading-img2.png" />
+    <Content Include="Theme\images\found-reading-img3.png" />
+    <Content Include="Theme\images\found-reading-img4.png" />
+    <Content Include="Theme\images\found-reading-img5.png" />
+    <Content Include="Theme\images\Fur.png" />
+    <Content Include="Theme\images\guidance.png" />
+    <Content Include="Theme\images\guidance1.png" />
+    <Content Include="Theme\images\hasfile.png" />
+    <Content Include="Theme\images\head.jpg" />
+    <Content Include="Theme\images\IE_logo.png" />
+    <Content Include="Theme\images\ifdown.png" />
+    <Content Include="Theme\images\ifup.png" />
+    <Content Include="Theme\images\index_bbg.png" />
+    <Content Include="Theme\images\infatorti_textearbg.png" />
+    <Content Include="Theme\images\infatorti_textearbut.png" />
+    <Content Include="Theme\images\information_libg.png" />
+    <Content Include="Theme\images\information_libg2.png" />
+    <Content Include="Theme\images\itieba.png" />
+    <Content Include="Theme\images\Lead_bias.png" />
+    <Content Include="Theme\images\Lead_header.png" />
+    <Content Include="Theme\images\Lead_le.png" />
+    <Content Include="Theme\images\Lead_ri.png" />
+    <Content Include="Theme\images\Lead_top.png" />
+    <Content Include="Theme\images\left_jiant.png" />
+    <Content Include="Theme\images\license.png" />
+    <Content Include="Theme\images\login-pic.png" />
+    <Content Include="Theme\images\login1.png" />
+    <Content Include="Theme\images\login_bg.png" />
+    <Content Include="Theme\images\login_button.png" />
+    <Content Include="Theme\images\login_logo.png" />
+    <Content Include="Theme\images\logo _2.png" />
+    <Content Include="Theme\images\LOGO.png" />
+    <Content Include="Theme\images\LOGO2.png" />
+    <Content Include="Theme\images\logo_new.png" />
+    <Content Include="Theme\images\LOGO_tit.png" />
+    <Content Include="Theme\images\LOGO_tit2.png" />
+    <Content Include="Theme\images\menu_jia.png" />
+    <Content Include="Theme\images\menu_jian.png" />
+    <Content Include="Theme\images\menu_rf_head.png" />
+    <Content Include="Theme\images\mole.png" />
+    <Content Include="Theme\images\mouse.png" />
+    <Content Include="Theme\images\nac_time.png" />
+    <Content Include="Theme\images\nav.png" />
+    <Content Include="Theme\images\nav_bg.png" />
+    <Content Include="Theme\images\nav_bj.png" />
+    <Content Include="Theme\images\nav_tit.png" />
+    <Content Include="Theme\images\nav_tit2.png" />
+    <Content Include="Theme\images\nav_tit3.png" />
+    <Content Include="Theme\images\newimg\article.png" />
+    <Content Include="Theme\images\newimg\dibu1.png" />
+    <Content Include="Theme\images\newimg\dibu10.png" />
+    <Content Include="Theme\images\newimg\dibu11.png" />
+    <Content Include="Theme\images\newimg\dibu12.png" />
+    <Content Include="Theme\images\newimg\dibu13.png" />
+    <Content Include="Theme\images\newimg\dibu14.png" />
+    <Content Include="Theme\images\newimg\dibu2.png" />
+    <Content Include="Theme\images\newimg\dibu3.png" />
+    <Content Include="Theme\images\newimg\dibu4.png" />
+    <Content Include="Theme\images\newimg\dibu5.png" />
+    <Content Include="Theme\images\newimg\dibu6.png" />
+    <Content Include="Theme\images\newimg\dibu7.png" />
+    <Content Include="Theme\images\newimg\dibu8.png" />
+    <Content Include="Theme\images\newimg\dibu9.png" />
+    <Content Include="Theme\images\newimg\enroll.png" />
+    <Content Include="Theme\images\newimg\Fieldset\article1.png" />
+    <Content Include="Theme\images\newimg\Fieldset\big_images1.png" />
+    <Content Include="Theme\images\newimg\Fieldset\big_images2.png" />
+    <Content Include="Theme\images\newimg\Fieldset\big_images3.png" />
+    <Content Include="Theme\images\newimg\Fieldset\big_image_text1.png" />
+    <Content Include="Theme\images\newimg\Fieldset\big_image_text2.png" />
+    <Content Include="Theme\images\newimg\Fieldset\big_image_text3.png" />
+    <Content Include="Theme\images\newimg\Fieldset\big_imgtext_carousel1.png" />
+    <Content Include="Theme\images\newimg\Fieldset\big_imgtext_carousel2.png" />
+    <Content Include="Theme\images\newimg\Fieldset\big_imgtext_carousel3.png" />
+    <Content Include="Theme\images\newimg\Fieldset\bottom_infor1.png" />
+    <Content Include="Theme\images\newimg\Fieldset\enroll2.png" />
+    <Content Include="Theme\images\newimg\Fieldset\enroll3.png" />
+    <Content Include="Theme\images\newimg\Fieldset\image1.png" />
+    <Content Include="Theme\images\newimg\Fieldset\image2.png" />
+    <Content Include="Theme\images\newimg\Fieldset\image3.png" />
+    <Content Include="Theme\images\newimg\Fieldset\middle_images1.png" />
+    <Content Include="Theme\images\newimg\Fieldset\middle_images2.png" />
+    <Content Include="Theme\images\newimg\Fieldset\middle_images3.png" />
+    <Content Include="Theme\images\newimg\Fieldset\middle_picture_carousel1.png" />
+    <Content Include="Theme\images\newimg\Fieldset\middle_picture_carousel2.png" />
+    <Content Include="Theme\images\newimg\Fieldset\middle_picture_carousel3.png" />
+    <Content Include="Theme\images\newimg\Fieldset\open_book_ranking3.png" />
+    <Content Include="Theme\images\newimg\Fieldset\picture_carousel1.png" />
+    <Content Include="Theme\images\newimg\Fieldset\picture_carousel2.png" />
+    <Content Include="Theme\images\newimg\Fieldset\picture_carousel3.png" />
+    <Content Include="Theme\images\newimg\Fieldset\small_images1.png" />
+    <Content Include="Theme\images\newimg\Fieldset\small_images2.png" />
+    <Content Include="Theme\images\newimg\Fieldset\small_images3.png" />
+    <Content Include="Theme\images\newimg\Fieldset\small_image_text1.png" />
+    <Content Include="Theme\images\newimg\Fieldset\small_image_text2.png" />
+    <Content Include="Theme\images\newimg\Fieldset\small_image_text3.png" />
+    <Content Include="Theme\images\newimg\Fieldset\text1.png" />
+    <Content Include="Theme\images\newimg\Fieldset\text2.png" />
+    <Content Include="Theme\images\newimg\Fieldset\text3.png" />
+    <Content Include="Theme\images\newimg\Fieldset\video1.png" />
+    <Content Include="Theme\images\newimg\Fieldset\video2.png" />
+    <Content Include="Theme\images\newimg\Fieldset\video3.png" />
+    <Content Include="Theme\images\newimg\Fieldset\vote1.png" />
+    <Content Include="Theme\images\newimg\Fieldset\writings1.png" />
+    <Content Include="Theme\images\newimg\Fieldset\writings2.png" />
+    <Content Include="Theme\images\newimg\Fieldset\writings3.png" />
+    <Content Include="Theme\images\newimg\green_box.png" />
+    <Content Include="Theme\images\newimg\pj1.png" />
+    <Content Include="Theme\images\newimg\pj2.png" />
+    <Content Include="Theme\images\newimg\pj3.png" />
+    <Content Include="Theme\images\newimg\pj4.png" />
+    <Content Include="Theme\images\newimg\red_box.png" />
+    <Content Include="Theme\images\newimg\subjectbut.png" />
+    <Content Include="Theme\images\newimg\titilebg.png" />
+    <Content Include="Theme\images\newimg\vote.png" />
+    <Content Include="Theme\images\newimg\yellow_box.png" />
+    <Content Include="Theme\images\new_dian.png" />
+    <Content Include="Theme\images\new_jia.png" />
+    <Content Include="Theme\images\new_jian.png" />
+    <Content Include="Theme\images\new_top.png" />
+    <Content Include="Theme\images\nofile.png" />
+    <Content Include="Theme\images\onerror.png" />
+    <Content Include="Theme\images\Opera_logo.png" />
+    <Content Include="Theme\images\pdf_default.png" />
+    <Content Include="Theme\images\pic.png" />
+    <Content Include="Theme\images\pic0.png" />
+    <Content Include="Theme\images\picture.png" />
+    <Content Include="Theme\images\plus.gif" />
+    <Content Include="Theme\images\plus_restp.png" />
+    <Content Include="Theme\images\praise.png" />
+    <Content Include="Theme\images\praise2.png" />
+    <Content Include="Theme\images\praise3.png" />
+    <Content Include="Theme\images\Q1.png" />
+    <Content Include="Theme\images\Q2.png" />
+    <Content Include="Theme\images\Q3.png" />
+    <Content Include="Theme\images\Q4.png" />
+    <Content Include="Theme\images\Q5.png" />
+    <Content Include="Theme\images\qiye_logo.png" />
+    <Content Include="Theme\images\qzone.png" />
+    <Content Include="Theme\images\readdatilpro_img.png" />
+    <Content Include="Theme\images\readdatilpro_img2.png" />
+    <Content Include="Theme\images\readprc_datbut.png" />
+    <Content Include="Theme\images\readprc_detail_banner.png" />
+    <Content Include="Theme\images\readprodat_img.png" />
+    <Content Include="Theme\images\read_li_bg.png" />
+    <Content Include="Theme\images\read_li_bg2.png" />
+    <Content Include="Theme\images\read_li_bg3.png" />
+    <Content Include="Theme\images\read_li_bg4.png" />
+    <Content Include="Theme\images\read_li_bg5.png" />
+    <Content Include="Theme\images\read_li_bg6.png" />
+    <Content Include="Theme\images\read_li_five.png" />
+    <Content Include="Theme\images\read_li_four.png" />
+    <Content Include="Theme\images\read_li_namber.png" />
+    <Content Include="Theme\images\read_li_six.png" />
+    <Content Include="Theme\images\read_li_three.png" />
+    <Content Include="Theme\images\read_li_two.png" />
+    <Content Include="Theme\images\read_re_tit.png" />
+    <Content Include="Theme\images\read_re_tp.png" />
+    <Content Include="Theme\images\reduce.png" />
+    <Content Include="Theme\images\reduce_restp.png" />
+    <Content Include="Theme\images\register_btimng.png" />
+    <Content Include="Theme\images\register_but.png" />
+    <Content Include="Theme\images\register_chextbox.png" />
+    <Content Include="Theme\images\register_chextbox2.png" />
+    <Content Include="Theme\images\register_img.png" />
+    <Content Include="Theme\images\register_QQ1.png" />
+    <Content Include="Theme\images\register_QQ2.png" />
+    <Content Include="Theme\images\register_QQ3.png" />
+    <Content Include="Theme\images\register_QQ4.png" />
+    <Content Include="Theme\images\register_QQ5.png" />
+    <Content Include="Theme\images\register_select_bg1.png" />
+    <Content Include="Theme\images\register_sml_tit1.png" />
+    <Content Include="Theme\images\register_sml_tit2.png" />
+    <Content Include="Theme\images\register_sml_yazh.png" />
+    <Content Include="Theme\images\register_tishi_bg.png" />
+    <Content Include="Theme\images\register_up.png" />
+    <Content Include="Theme\images\register_up22.png" />
+    <Content Include="Theme\images\Safari_logo.png" />
+    <Content Include="Theme\images\sale_banner.png" />
+    <Content Include="Theme\images\sale_but.png" />
+    <Content Include="Theme\images\sale_img.png" />
+    <Content Include="Theme\images\sale_tit1.png" />
+    <Content Include="Theme\images\sale_tit2.png" />
+    <Content Include="Theme\images\select_bj.png" />
+    <Content Include="Theme\images\select_sch.png" />
+    <Content Include="Theme\images\select_search.png" />
+    <Content Include="Theme\images\select_search_a.png" />
+    <Content Include="Theme\images\select_search_a2.png" />
+    <Content Include="Theme\images\sinaminiblog.png" />
+    <Content Include="Theme\images\special\new_tubiao.png" />
+    <Content Include="Theme\images\special\new_tubiao10.png" />
+    <Content Include="Theme\images\special\new_tubiao11.png" />
+    <Content Include="Theme\images\special\new_tubiao12.png" />
+    <Content Include="Theme\images\special\new_tubiao13.png" />
+    <Content Include="Theme\images\special\new_tubiao14.png" />
+    <Content Include="Theme\images\special\new_tubiao15.png" />
+    <Content Include="Theme\images\special\new_tubiao16.png" />
+    <Content Include="Theme\images\special\new_tubiao17.png" />
+    <Content Include="Theme\images\special\new_tubiao18.png" />
+    <Content Include="Theme\images\special\new_tubiao181.png" />
+    <Content Include="Theme\images\special\new_tubiao19.png" />
+    <Content Include="Theme\images\special\new_tubiao2.png" />
+    <Content Include="Theme\images\special\new_tubiao20.png" />
+    <Content Include="Theme\images\special\new_tubiao21.png" />
+    <Content Include="Theme\images\special\new_tubiao22.png" />
+    <Content Include="Theme\images\special\new_tubiao23.png" />
+    <Content Include="Theme\images\special\new_tubiao24.png" />
+    <Content Include="Theme\images\special\new_tubiao25.png" />
+    <Content Include="Theme\images\special\new_tubiao26.png" />
+    <Content Include="Theme\images\special\new_tubiao27.png" />
+    <Content Include="Theme\images\special\new_tubiao28.png" />
+    <Content Include="Theme\images\special\new_tubiao29.png" />
+    <Content Include="Theme\images\special\new_tubiao3.png" />
+    <Content Include="Theme\images\special\new_tubiao30.png" />
+    <Content Include="Theme\images\special\new_tubiao31.png" />
+    <Content Include="Theme\images\special\new_tubiao32.png" />
+    <Content Include="Theme\images\special\new_tubiao33.png" />
+    <Content Include="Theme\images\special\new_tubiao34.png" />
+    <Content Include="Theme\images\special\new_tubiao35.png" />
+    <Content Include="Theme\images\special\new_tubiao36.png" />
+    <Content Include="Theme\images\special\new_tubiao37.png" />
+    <Content Include="Theme\images\special\new_tubiao38.png" />
+    <Content Include="Theme\images\special\new_tubiao39.png" />
+    <Content Include="Theme\images\special\new_tubiao4.png" />
+    <Content Include="Theme\images\special\new_tubiao40.png" />
+    <Content Include="Theme\images\special\new_tubiao41.png" />
+    <Content Include="Theme\images\special\new_tubiao5.png" />
+    <Content Include="Theme\images\special\new_tubiao6.png" />
+    <Content Include="Theme\images\special\new_tubiao7.png" />
+    <Content Include="Theme\images\special\new_tubiao8.png" />
+    <Content Include="Theme\images\special\new_tubiao9.png" />
+    <Content Include="Theme\images\star.png" />
+    <Content Include="Theme\images\tiane.png" />
+    <Content Include="Theme\images\tishi_bg.png" />
+    <Content Include="Theme\images\title_left.png" />
+    <Content Include="Theme\images\up_bg.png" />
+    <Content Include="Theme\images\vediodatailstab.png" />
+    <Content Include="Theme\images\vediodatailstab2.png" />
+    <Content Include="Theme\images\vediodatailstab3.png" />
+    <Content Include="Theme\images\weixin.png" />
+    <Content Include="Theme\images\zhizhao.png" />
+    <Content Include="Theme\js\ajaxfileupload.js" />
+    <Content Include="Theme\js\citys.js" />
+    <Content Include="Theme\js\ckplayer.js" />
+    <Content Include="Theme\js\ckplayer\ckplayer.js" />
+    <Content Include="Theme\js\ckplayer\ckplayer.swf" />
+    <Content Include="Theme\js\ckplayer\ckplayer.xml" />
+    <Content Include="Theme\js\ckplayer\language.xml" />
+    <Content Include="Theme\js\ckplayer\related.xml" />
+    <Content Include="Theme\js\ckplayer\share.xml" />
+    <Content Include="Theme\js\ckplayer\share\feixin.png" />
+    <Content Include="Theme\js\ckplayer\share\google.png" />
+    <Content Include="Theme\js\ckplayer\share\kaixin001.png" />
+    <Content Include="Theme\js\ckplayer\share\msn.png" />
+    <Content Include="Theme\js\ckplayer\share\qq.png" />
+    <Content Include="Theme\js\ckplayer\share\qq2.png" />
+    <Content Include="Theme\js\ckplayer\share\qzone.png" />
+    <Content Include="Theme\js\ckplayer\share\rr.png" />
+    <Content Include="Theme\js\ckplayer\share\sina.png" />
+    <Content Include="Theme\js\ckplayer\share\sohu.png" />
+    <Content Include="Theme\js\ckplayer\share\tianya.png" />
+    <Content Include="Theme\js\ckplayer\style.swf" />
+    <Content Include="Theme\js\country.js" />
+    <Content Include="Theme\js\easyPager\EasyPager.css" />
+    <Content Include="Theme\js\easyPager\EasyPager.js" />
+    <Content Include="Theme\js\easyPager\EasyPagerNoCookie.js" />
+    <Content Include="Theme\js\easyPager\template.htm" />
+    <Content Include="Theme\js\imgUpload.js" />
+    <Content Include="Theme\js\ImgZoom\cropbox.js" />
+    <Content Include="Theme\js\ImgZoom\style.css" />
+    <Content Include="Theme\js\jquery-1.6.4.min.js" />
+    <Content Include="Theme\js\jquery-1.8.3.min.js" />
+    <Content Include="Theme\js\jquery.cookie.js" />
+    <Content Include="Theme\js\jquery.select.js" />
+    <Content Include="Theme\js\jscop\css\demos.css" />
+    <Content Include="Theme\js\jscop\css\Jcrop.gif" />
+    <Content Include="Theme\js\jscop\css\jquery.Jcrop.css" />
+    <Content Include="Theme\js\jscop\css\main.css" />
+    <Content Include="Theme\js\jscop\demo.html" />
+    <Content Include="Theme\js\jscop\images\7.jpg" />
+    <Content Include="Theme\js\jscop\images\photo.jpg" />
+    <Content Include="Theme\js\jscop\js\jquery-1.7.2.min.js" />
+    <Content Include="Theme\js\jscop\js\jquery.Jcrop.js" />
+    <Content Include="Theme\js\jscop\js\jquery.Jcrop.min.js" />
+    <Content Include="Theme\js\kindeditor\jquery.js" />
+    <Content Include="Theme\js\kindeditor\kindeditor-min.js" />
+    <Content Include="Theme\js\kindeditor\kindeditor.js" />
+    <Content Include="Theme\js\kindeditor\lang\ar.js" />
+    <Content Include="Theme\js\kindeditor\lang\en.js" />
+    <Content Include="Theme\js\kindeditor\lang\ko.js" />
+    <Content Include="Theme\js\kindeditor\lang\zh_CN.js" />
+    <Content Include="Theme\js\kindeditor\lang\zh_TW.js" />
+    <Content Include="Theme\js\kindeditor\plugins\anchor\anchor.js" />
+    <Content Include="Theme\js\kindeditor\plugins\autoheight\autoheight.js" />
+    <Content Include="Theme\js\kindeditor\plugins\baidumap\baidumap.js" />
+    <Content Include="Theme\js\kindeditor\plugins\baidumap\index.html" />
+    <Content Include="Theme\js\kindeditor\plugins\baidumap\map.html" />
+    <Content Include="Theme\js\kindeditor\plugins\clearhtml\clearhtml.js" />
+    <Content Include="Theme\js\kindeditor\plugins\code\code.js" />
+    <Content Include="Theme\js\kindeditor\plugins\code\prettify.css" />
+    <Content Include="Theme\js\kindeditor\plugins\code\prettify.js" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\emoticons.js" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\0.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\1.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\10.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\100.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\101.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\102.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\103.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\104.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\105.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\106.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\107.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\108.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\109.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\11.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\110.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\111.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\112.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\113.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\114.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\115.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\116.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\117.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\118.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\119.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\12.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\120.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\121.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\122.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\123.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\124.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\125.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\126.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\127.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\128.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\129.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\13.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\130.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\131.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\132.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\133.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\134.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\14.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\15.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\16.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\17.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\18.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\19.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\2.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\20.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\21.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\22.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\23.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\24.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\25.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\26.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\27.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\28.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\29.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\3.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\30.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\31.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\32.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\33.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\34.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\35.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\36.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\37.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\38.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\39.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\4.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\40.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\41.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\42.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\43.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\44.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\45.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\46.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\47.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\48.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\49.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\5.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\50.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\51.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\52.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\53.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\54.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\55.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\56.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\57.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\58.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\59.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\6.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\60.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\61.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\62.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\63.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\64.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\65.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\66.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\67.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\68.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\69.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\7.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\70.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\71.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\72.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\73.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\74.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\75.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\76.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\77.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\78.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\79.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\8.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\80.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\81.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\82.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\83.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\84.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\85.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\86.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\87.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\88.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\89.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\9.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\90.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\91.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\92.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\93.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\94.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\95.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\96.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\97.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\98.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\99.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\emoticons\images\static.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\filemanager\filemanager.js" />
+    <Content Include="Theme\js\kindeditor\plugins\filemanager\images\file-16.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\filemanager\images\file-64.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\filemanager\images\go-up.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\flash\flash.js" />
+    <Content Include="Theme\js\kindeditor\plugins\image\image.js" />
+    <Content Include="Theme\js\kindeditor\plugins\image\images\align_left.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\image\images\align_right.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\image\images\align_top.gif" />
+    <Content Include="Theme\js\kindeditor\plugins\image\images\refresh.png" />
+    <Content Include="Theme\js\kindeditor\plugins\insertfile\insertfile.js" />
+    <Content Include="Theme\js\kindeditor\plugins\lineheight\lineheight.js" />
+    <Content Include="Theme\js\kindeditor\plugins\link\link.js" />
+    <Content Include="Theme\js\kindeditor\plugins\map\map.html" />
+    <Content Include="Theme\js\kindeditor\plugins\map\map.js" />
+    <Content Include="Theme\js\kindeditor\plugins\media\media.js" />
+    <Content Include="Theme\js\kindeditor\plugins\multiimage\images\image.png" />
+    <Content Include="Theme\js\kindeditor\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="Theme\js\kindeditor\plugins\multiimage\images\select-files-zh_CN.png" />
+    <Content Include="Theme\js\kindeditor\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="Theme\js\kindeditor\plugins\multiimage\multiimage.js" />
+    <Content Include="Theme\js\kindeditor\plugins\pagebreak\pagebreak.js" />
+    <Content Include="Theme\js\kindeditor\plugins\plainpaste\plainpaste.js" />
+    <Content Include="Theme\js\kindeditor\plugins\preview\preview.js" />
+    <Content Include="Theme\js\kindeditor\plugins\quickformat\quickformat.js" />
+    <Content Include="Theme\js\kindeditor\plugins\table\table.js" />
+    <Content Include="Theme\js\kindeditor\plugins\template\html\1.html" />
+    <Content Include="Theme\js\kindeditor\plugins\template\html\2.html" />
+    <Content Include="Theme\js\kindeditor\plugins\template\html\3.html" />
+    <Content Include="Theme\js\kindeditor\plugins\template\template.js" />
+    <Content Include="Theme\js\kindeditor\plugins\wordpaste\wordpaste.js" />
+    <Content Include="Theme\js\kindeditor\themes\common\anchor.gif" />
+    <Content Include="Theme\js\kindeditor\themes\common\blank.gif" />
+    <Content Include="Theme\js\kindeditor\themes\common\flash.gif" />
+    <Content Include="Theme\js\kindeditor\themes\common\loading.gif" />
+    <Content Include="Theme\js\kindeditor\themes\common\media.gif" />
+    <Content Include="Theme\js\kindeditor\themes\common\rm.gif" />
+    <Content Include="Theme\js\kindeditor\themes\default\background.png" />
+    <Content Include="Theme\js\kindeditor\themes\default\default.css" />
+    <Content Include="Theme\js\kindeditor\themes\default\default.png" />
+    <Content Include="Theme\js\kindeditor\themes\qq\editor.gif" />
+    <Content Include="Theme\js\kindeditor\themes\qq\qq.css" />
+    <Content Include="Theme\js\kindeditor\themes\simple\simple.css" />
+    <Content Include="Theme\js\login.js" />
+    <Content Include="Theme\js\My97DatePicker\calendar.js" />
+    <Content Include="Theme\js\My97DatePicker\lang\en.js" />
+    <Content Include="Theme\js\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="Theme\js\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="Theme\js\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="Theme\js\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="Theme\js\My97DatePicker\skin\default\img.gif" />
+    <Content Include="Theme\js\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="Theme\js\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Theme\js\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Theme\js\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="Theme\js\My97DatePicker\WdatePicker.js" />
+    <Content Include="Theme\js\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="Theme\js\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="Theme\js\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="Theme\js\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="Theme\js\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="Theme\js\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="Theme\js\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="Theme\js\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="Theme\js\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="Theme\js\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\1.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\10.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\11.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\12.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\13.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\14.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\15.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\16.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\17.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\18.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\19.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\2.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\20.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\21.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\22.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\23.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\24.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\25.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\26.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\27.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\28.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\29.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\3.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\30.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\31.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\32.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\33.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\34.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\35.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\36.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\37.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\38.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\39.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\4.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\40.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\41.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\42.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\43.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\44.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\45.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\46.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\47.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\48.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\49.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\5.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\50.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\51.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\52.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\53.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\54.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\55.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\56.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\57.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\58.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\59.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\6.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\60.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\61.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\62.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\63.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\64.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\65.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\66.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\67.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\68.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\69.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\7.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\70.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\71.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\72.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\73.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\74.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\75.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\8.gif" />
+    <Content Include="Theme\js\qqemotion\arclist\9.gif" />
+    <Content Include="Theme\js\qqemotion\css\qqFace.css" />
+    <Content Include="Theme\js\qqemotion\jquery.qqFace.js" />
+    <Content Include="Theme\js\qqemotion\jquery.qqFaceForBook.js" />
+    <Content Include="Theme\js\qqemotion\qqFaceVideo.js" />
+    <Content Include="Theme\js\roleoperate.js" />
+    <Content Include="Theme\js\select.js" />
+    <Content Include="Theme\js\ShowPager.js" />
+    <Content Include="Theme\js\UEditor\dialogs\anchor\anchor.html" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\attachment.css" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\attachment.html" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\attachment.js" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\fileTypeImages\icon_chm.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\fileTypeImages\icon_default.png" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\fileTypeImages\icon_doc.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\fileTypeImages\icon_exe.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\fileTypeImages\icon_jpg.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\fileTypeImages\icon_mp3.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\fileTypeImages\icon_mv.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\fileTypeImages\icon_pdf.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\fileTypeImages\icon_ppt.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\fileTypeImages\icon_psd.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\fileTypeImages\icon_rar.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\fileTypeImages\icon_txt.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\fileTypeImages\icon_xls.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\images\alignicon.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\images\alignicon.png" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\images\bg.png" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\images\file-icons.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\images\file-icons.png" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\images\icons.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\images\icons.png" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\images\image.png" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\images\progress.png" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\images\success.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\attachment\images\success.png" />
+    <Content Include="Theme\js\UEditor\dialogs\background\background.css" />
+    <Content Include="Theme\js\UEditor\dialogs\background\background.html" />
+    <Content Include="Theme\js\UEditor\dialogs\background\background.js" />
+    <Content Include="Theme\js\UEditor\dialogs\background\images\bg.png" />
+    <Content Include="Theme\js\UEditor\dialogs\background\images\success.png" />
+    <Content Include="Theme\js\UEditor\dialogs\charts\chart.config.js" />
+    <Content Include="Theme\js\UEditor\dialogs\charts\charts.css" />
+    <Content Include="Theme\js\UEditor\dialogs\charts\charts.html" />
+    <Content Include="Theme\js\UEditor\dialogs\charts\charts.js" />
+    <Content Include="Theme\js\UEditor\dialogs\charts\images\charts0.png" />
+    <Content Include="Theme\js\UEditor\dialogs\charts\images\charts1.png" />
+    <Content Include="Theme\js\UEditor\dialogs\charts\images\charts2.png" />
+    <Content Include="Theme\js\UEditor\dialogs\charts\images\charts3.png" />
+    <Content Include="Theme\js\UEditor\dialogs\charts\images\charts4.png" />
+    <Content Include="Theme\js\UEditor\dialogs\charts\images\charts5.png" />
+    <Content Include="Theme\js\UEditor\dialogs\emotion\emotion.css" />
+    <Content Include="Theme\js\UEditor\dialogs\emotion\emotion.html" />
+    <Content Include="Theme\js\UEditor\dialogs\emotion\emotion.js" />
+    <Content Include="Theme\js\UEditor\dialogs\emotion\images\0.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\emotion\images\bface.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\emotion\images\cface.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\emotion\images\fface.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="Theme\js\UEditor\dialogs\emotion\images\tface.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\emotion\images\wface.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\emotion\images\yface.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\gmap\gmap.html" />
+    <Content Include="Theme\js\UEditor\dialogs\help\help.css" />
+    <Content Include="Theme\js\UEditor\dialogs\help\help.html" />
+    <Content Include="Theme\js\UEditor\dialogs\help\help.js" />
+    <Content Include="Theme\js\UEditor\dialogs\image\image.css" />
+    <Content Include="Theme\js\UEditor\dialogs\image\image.html" />
+    <Content Include="Theme\js\UEditor\dialogs\image\image.js" />
+    <Content Include="Theme\js\UEditor\dialogs\image\images\alignicon.jpg" />
+    <Content Include="Theme\js\UEditor\dialogs\image\images\bg.png" />
+    <Content Include="Theme\js\UEditor\dialogs\image\images\icons.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\image\images\icons.png" />
+    <Content Include="Theme\js\UEditor\dialogs\image\images\image.png" />
+    <Content Include="Theme\js\UEditor\dialogs\image\images\progress.png" />
+    <Content Include="Theme\js\UEditor\dialogs\image\images\success.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\image\images\success.png" />
+    <Content Include="Theme\js\UEditor\dialogs\insertframe\insertframe.html" />
+    <Content Include="Theme\js\UEditor\dialogs\internal.js" />
+    <Content Include="Theme\js\UEditor\dialogs\link\link.html" />
+    <Content Include="Theme\js\UEditor\dialogs\map\map.html" />
+    <Content Include="Theme\js\UEditor\dialogs\map\show.html" />
+    <Content Include="Theme\js\UEditor\dialogs\music\music.css" />
+    <Content Include="Theme\js\UEditor\dialogs\music\music.html" />
+    <Content Include="Theme\js\UEditor\dialogs\music\music.js" />
+    <Content Include="Theme\js\UEditor\dialogs\preview\preview.html" />
+    <Content Include="Theme\js\UEditor\dialogs\scrawl\images\addimg.png" />
+    <Content Include="Theme\js\UEditor\dialogs\scrawl\images\brush.png" />
+    <Content Include="Theme\js\UEditor\dialogs\scrawl\images\delimg.png" />
+    <Content Include="Theme\js\UEditor\dialogs\scrawl\images\delimgH.png" />
+    <Content Include="Theme\js\UEditor\dialogs\scrawl\images\empty.png" />
+    <Content Include="Theme\js\UEditor\dialogs\scrawl\images\emptyH.png" />
+    <Content Include="Theme\js\UEditor\dialogs\scrawl\images\eraser.png" />
+    <Content Include="Theme\js\UEditor\dialogs\scrawl\images\redo.png" />
+    <Content Include="Theme\js\UEditor\dialogs\scrawl\images\redoH.png" />
+    <Content Include="Theme\js\UEditor\dialogs\scrawl\images\scale.png" />
+    <Content Include="Theme\js\UEditor\dialogs\scrawl\images\scaleH.png" />
+    <Content Include="Theme\js\UEditor\dialogs\scrawl\images\size.png" />
+    <Content Include="Theme\js\UEditor\dialogs\scrawl\images\undo.png" />
+    <Content Include="Theme\js\UEditor\dialogs\scrawl\images\undoH.png" />
+    <Content Include="Theme\js\UEditor\dialogs\scrawl\scrawl.css" />
+    <Content Include="Theme\js\UEditor\dialogs\scrawl\scrawl.html" />
+    <Content Include="Theme\js\UEditor\dialogs\scrawl\scrawl.js" />
+    <Content Include="Theme\js\UEditor\dialogs\searchreplace\searchreplace.html" />
+    <Content Include="Theme\js\UEditor\dialogs\searchreplace\searchreplace.js" />
+    <Content Include="Theme\js\UEditor\dialogs\snapscreen\snapscreen.html" />
+    <Content Include="Theme\js\UEditor\dialogs\spechars\spechars.html" />
+    <Content Include="Theme\js\UEditor\dialogs\spechars\spechars.js" />
+    <Content Include="Theme\js\UEditor\dialogs\table\dragicon.png" />
+    <Content Include="Theme\js\UEditor\dialogs\table\edittable.css" />
+    <Content Include="Theme\js\UEditor\dialogs\table\edittable.html" />
+    <Content Include="Theme\js\UEditor\dialogs\table\edittable.js" />
+    <Content Include="Theme\js\UEditor\dialogs\table\edittd.html" />
+    <Content Include="Theme\js\UEditor\dialogs\table\edittip.html" />
+    <Content Include="Theme\js\UEditor\dialogs\template\config.js" />
+    <Content Include="Theme\js\UEditor\dialogs\template\images\bg.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\template\images\pre0.png" />
+    <Content Include="Theme\js\UEditor\dialogs\template\images\pre1.png" />
+    <Content Include="Theme\js\UEditor\dialogs\template\images\pre2.png" />
+    <Content Include="Theme\js\UEditor\dialogs\template\images\pre3.png" />
+    <Content Include="Theme\js\UEditor\dialogs\template\images\pre4.png" />
+    <Content Include="Theme\js\UEditor\dialogs\template\template.css" />
+    <Content Include="Theme\js\UEditor\dialogs\template\template.html" />
+    <Content Include="Theme\js\UEditor\dialogs\template\template.js" />
+    <Content Include="Theme\js\UEditor\dialogs\video\images\bg.png" />
+    <Content Include="Theme\js\UEditor\dialogs\video\images\center_focus.jpg" />
+    <Content Include="Theme\js\UEditor\dialogs\video\images\file-icons.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\video\images\file-icons.png" />
+    <Content Include="Theme\js\UEditor\dialogs\video\images\icons.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\video\images\icons.png" />
+    <Content Include="Theme\js\UEditor\dialogs\video\images\image.png" />
+    <Content Include="Theme\js\UEditor\dialogs\video\images\left_focus.jpg" />
+    <Content Include="Theme\js\UEditor\dialogs\video\images\none_focus.jpg" />
+    <Content Include="Theme\js\UEditor\dialogs\video\images\progress.png" />
+    <Content Include="Theme\js\UEditor\dialogs\video\images\right_focus.jpg" />
+    <Content Include="Theme\js\UEditor\dialogs\video\images\success.gif" />
+    <Content Include="Theme\js\UEditor\dialogs\video\images\success.png" />
+    <Content Include="Theme\js\UEditor\dialogs\video\video.css" />
+    <Content Include="Theme\js\UEditor\dialogs\video\video.html" />
+    <Content Include="Theme\js\UEditor\dialogs\video\video.js" />
+    <Content Include="Theme\js\UEditor\dialogs\webapp\webapp.html" />
+    <Content Include="Theme\js\UEditor\dialogs\wordimage\fClipboard_ueditor.swf" />
+    <Content Include="Theme\js\UEditor\dialogs\wordimage\imageUploader.swf" />
+    <Content Include="Theme\js\UEditor\dialogs\wordimage\tangram.js" />
+    <Content Include="Theme\js\UEditor\dialogs\wordimage\wordimage.html" />
+    <Content Include="Theme\js\UEditor\dialogs\wordimage\wordimage.js" />
+    <Content Include="Theme\js\UEditor\lang\en\en.js" />
+    <Content Include="Theme\js\UEditor\lang\en\images\addimage.png" />
+    <Content Include="Theme\js\UEditor\lang\en\images\alldeletebtnhoverskin.png" />
+    <Content Include="Theme\js\UEditor\lang\en\images\alldeletebtnupskin.png" />
+    <Content Include="Theme\js\UEditor\lang\en\images\background.png" />
+    <Content Include="Theme\js\UEditor\lang\en\images\button.png" />
+    <Content Include="Theme\js\UEditor\lang\en\images\copy.png" />
+    <Content Include="Theme\js\UEditor\lang\en\images\deletedisable.png" />
+    <Content Include="Theme\js\UEditor\lang\en\images\deleteenable.png" />
+    <Content Include="Theme\js\UEditor\lang\en\images\listbackground.png" />
+    <Content Include="Theme\js\UEditor\lang\en\images\localimage.png" />
+    <Content Include="Theme\js\UEditor\lang\en\images\music.png" />
+    <Content Include="Theme\js\UEditor\lang\en\images\rotateleftdisable.png" />
+    <Content Include="Theme\js\UEditor\lang\en\images\rotateleftenable.png" />
+    <Content Include="Theme\js\UEditor\lang\en\images\rotaterightdisable.png" />
+    <Content Include="Theme\js\UEditor\lang\en\images\rotaterightenable.png" />
+    <Content Include="Theme\js\UEditor\lang\en\images\upload.png" />
+    <Content Include="Theme\js\UEditor\lang\zh-cn\images\copy.png" />
+    <Content Include="Theme\js\UEditor\lang\zh-cn\images\localimage.png" />
+    <Content Include="Theme\js\UEditor\lang\zh-cn\images\music.png" />
+    <Content Include="Theme\js\UEditor\lang\zh-cn\images\upload.png" />
+    <Content Include="Theme\js\UEditor\lang\zh-cn\zh-cn.js" />
+    <Content Include="Theme\js\UEditor\net\upload\image\20160218\6359143143909119588163056.png" />
+    <Content Include="Theme\js\UEditor\net\upload\image\20160218\6359143177891948036717400.png" />
+    <Content Include="Theme\js\UEditor\net\upload\image\20160218\6359143184381083875237934.png" />
+    <Content Include="Theme\js\UEditor\obj\Debug\UEditor.csproj.FileListAbsolute.txt" />
+    <Content Include="Theme\js\UEditor\obj\Debug\UEditor.dll" />
+    <Content Include="Theme\js\UEditor\obj\Debug\UEditor.pdb" />
+    <Content Include="Theme\js\UEditor\themes\default\css\ueditor.css" />
+    <Content Include="Theme\js\UEditor\themes\default\css\ueditor.min.css" />
+    <Content Include="Theme\js\UEditor\themes\default\dialogbase.css" />
+    <Content Include="Theme\js\UEditor\themes\default\images\anchor.gif" />
+    <Content Include="Theme\js\UEditor\themes\default\images\arrow.png" />
+    <Content Include="Theme\js\UEditor\themes\default\images\arrow_down.png" />
+    <Content Include="Theme\js\UEditor\themes\default\images\arrow_up.png" />
+    <Content Include="Theme\js\UEditor\themes\default\images\button-bg.gif" />
+    <Content Include="Theme\js\UEditor\themes\default\images\cancelbutton.gif" />
+    <Content Include="Theme\js\UEditor\themes\default\images\charts.png" />
+    <Content Include="Theme\js\UEditor\themes\default\images\cursor_h.gif" />
+    <Content Include="Theme\js\UEditor\themes\default\images\cursor_h.png" />
+    <Content Include="Theme\js\UEditor\themes\default\images\cursor_v.gif" />
+    <Content Include="Theme\js\UEditor\themes\default\images\cursor_v.png" />
+    <Content Include="Theme\js\UEditor\themes\default\images\dialog-title-bg.png" />
+    <Content Include="Theme\js\UEditor\themes\default\images\filescan.png" />
+    <Content Include="Theme\js\UEditor\themes\default\images\highlighted.gif" />
+    <Content Include="Theme\js\UEditor\themes\default\images\icons-all.gif" />
+    <Content Include="Theme\js\UEditor\themes\default\images\icons.gif" />
+    <Content Include="Theme\js\UEditor\themes\default\images\icons.png" />
+    <Content Include="Theme\js\UEditor\themes\default\images\loaderror.png" />
+    <Content Include="Theme\js\UEditor\themes\default\images\loading.gif" />
+    <Content Include="Theme\js\UEditor\themes\default\images\lock.gif" />
+    <Content Include="Theme\js\UEditor\themes\default\images\neweditor-tab-bg.png" />
+    <Content Include="Theme\js\UEditor\themes\default\images\pagebreak.gif" />
+    <Content Include="Theme\js\UEditor\themes\default\images\scale.png" />
+    <Content Include="Theme\js\UEditor\themes\default\images\sortable.png" />
+    <Content Include="Theme\js\UEditor\themes\default\images\spacer.gif" />
+    <Content Include="Theme\js\UEditor\themes\default\images\sparator_v.png" />
+    <Content Include="Theme\js\UEditor\themes\default\images\table-cell-align.png" />
+    <Content Include="Theme\js\UEditor\themes\default\images\tangram-colorpicker.png" />
+    <Content Include="Theme\js\UEditor\themes\default\images\toolbar_bg.png" />
+    <Content Include="Theme\js\UEditor\themes\default\images\unhighlighted.gif" />
+    <Content Include="Theme\js\UEditor\themes\default\images\upload.png" />
+    <Content Include="Theme\js\UEditor\themes\default\images\videologo.gif" />
+    <Content Include="Theme\js\UEditor\themes\default\images\word.gif" />
+    <Content Include="Theme\js\UEditor\themes\default\images\wordpaste.png" />
+    <Content Include="Theme\js\UEditor\themes\iframe.css" />
+    <Content Include="Theme\js\UEditor\third-party\codemirror\codemirror.css" />
+    <Content Include="Theme\js\UEditor\third-party\codemirror\codemirror.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\adapters\mootools-adapter.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\adapters\mootools-adapter.src.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\adapters\prototype-adapter.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\adapters\prototype-adapter.src.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\adapters\standalone-framework.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\adapters\standalone-framework.src.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\highcharts-more.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\highcharts-more.src.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\highcharts.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\highcharts.src.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\modules\annotations.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\modules\annotations.src.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\modules\canvas-tools.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\modules\canvas-tools.src.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\modules\data.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\modules\data.src.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\modules\drilldown.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\modules\drilldown.src.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\modules\exporting.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\modules\exporting.src.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\modules\funnel.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\modules\funnel.src.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\modules\heatmap.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\modules\heatmap.src.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\modules\map.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\modules\map.src.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\modules\no-data-to-display.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\modules\no-data-to-display.src.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\themes\dark-blue.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\themes\dark-green.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\themes\gray.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\themes\grid.js" />
+    <Content Include="Theme\js\UEditor\third-party\highcharts\themes\skies.js" />
+    <Content Include="Theme\js\UEditor\third-party\jquery-1.10.2.js" />
+    <Content Include="Theme\js\UEditor\third-party\jquery-1.10.2.min.js" />
+    <Content Include="Theme\js\UEditor\third-party\snapscreen\UEditorSnapscreen.exe" />
+    <Content Include="Theme\js\UEditor\third-party\SyntaxHighlighter\shCore.js" />
+    <Content Include="Theme\js\UEditor\third-party\SyntaxHighlighter\shCoreDefault.css" />
+    <Content Include="Theme\js\UEditor\third-party\video-js\font\vjs.svg" />
+    <Content Include="Theme\js\UEditor\third-party\video-js\video-js.css" />
+    <Content Include="Theme\js\UEditor\third-party\video-js\video-js.min.css" />
+    <Content Include="Theme\js\UEditor\third-party\video-js\video-js.swf" />
+    <Content Include="Theme\js\UEditor\third-party\video-js\video.dev.js" />
+    <Content Include="Theme\js\UEditor\third-party\video-js\video.js" />
+    <Content Include="Theme\js\UEditor\third-party\webuploader\Uploader.swf" />
+    <Content Include="Theme\js\UEditor\third-party\webuploader\webuploader.css" />
+    <Content Include="Theme\js\UEditor\third-party\webuploader\webuploader.custom.js" />
+    <Content Include="Theme\js\UEditor\third-party\webuploader\webuploader.custom.min.js" />
+    <Content Include="Theme\js\UEditor\third-party\webuploader\webuploader.flashonly.js" />
+    <Content Include="Theme\js\UEditor\third-party\webuploader\webuploader.flashonly.min.js" />
+    <Content Include="Theme\js\UEditor\third-party\webuploader\webuploader.html5only.js" />
+    <Content Include="Theme\js\UEditor\third-party\webuploader\webuploader.html5only.min.js" />
+    <Content Include="Theme\js\UEditor\third-party\webuploader\webuploader.js" />
+    <Content Include="Theme\js\UEditor\third-party\webuploader\webuploader.min.js" />
+    <Content Include="Theme\js\UEditor\third-party\webuploader\webuploader.withoutimage.js" />
+    <Content Include="Theme\js\UEditor\third-party\webuploader\webuploader.withoutimage.min.js" />
+    <Content Include="Theme\js\UEditor\third-party\zeroclipboard\ZeroClipboard.js" />
+    <Content Include="Theme\js\UEditor\third-party\zeroclipboard\ZeroClipboard.min.js" />
+    <Content Include="Theme\js\UEditor\third-party\zeroclipboard\ZeroClipboard.swf" />
+    <Content Include="Theme\js\UEditor\ueditor.all.js" />
+    <Content Include="Theme\js\UEditor\ueditor.all.min.js" />
+    <Content Include="Theme\js\UEditor\ueditor.config.js" />
+    <Content Include="Theme\js\UEditor\ueditor.parse.js" />
+    <Content Include="Theme\js\UEditor\ueditor.parse.min.js" />
+    <Content Include="Theme\js\uploadify\btn.png" />
+    <Content Include="Theme\js\uploadify\btnstart.png" />
+    <Content Include="Theme\js\uploadify\cancel.png" />
+    <Content Include="Theme\js\uploadify\cutimg.html" />
+    <Content Include="Theme\js\uploadify\img.css" />
+    <Content Include="Theme\js\uploadify\img.js" />
+    <Content Include="Theme\js\uploadify\jquery.Jcrop.css" />
+    <Content Include="Theme\js\uploadify\jquery.Jcrop.js" />
+    <Content Include="Theme\js\uploadify\jquery.uploadify.v2.1.4.js" />
+    <Content Include="Theme\js\uploadify\swfobject.js" />
+    <Content Include="Theme\js\uploadify\upload.bak.js" />
+    <Content Include="Theme\js\uploadify\upload.js" />
+    <Content Include="Theme\js\uploadify\uploadify.css" />
+    <Content Include="Theme\js\uploadify\uploadify.swf" />
+    <Content Include="Theme\js\upload\btn.png" />
+    <Content Include="Theme\js\upload\btn1.png" />
+    <Content Include="Theme\js\upload\btn2.png" />
+    <Content Include="Theme\js\upload\btnSenstiveWord.png" />
+    <Content Include="Theme\js\upload\btnstart.png" />
+    <Content Include="Theme\js\upload\cancel.png" />
+    <Content Include="Theme\js\upload\jquery.uploadify.v2.1.4.js" />
+    <Content Include="Theme\js\upload\swfobject.js" />
+    <Content Include="Theme\js\upload\upload.bak.js" />
+    <Content Include="Theme\js\upload\upload.js" />
+    <Content Include="Theme\js\upload\uploadify.css" />
+    <Content Include="Theme\js\upload\uploadify.swf" />
+    <Content Include="Theme\js\wbox\mapapi.js" />
+    <Content Include="Theme\js\wbox\wbox-min.js" />
+    <Content Include="Theme\js\wbox\wbox.js" />
+    <Content Include="Theme\js\wbox\wbox\close.png" />
+    <Content Include="Theme\js\wbox\wbox\close0.png" />
+    <Content Include="Theme\js\wbox\wbox\ico-arrow.gif" />
+    <Content Include="Theme\js\wbox\wbox\loading.gif" />
+    <Content Include="Theme\js\wbox\wbox\titleBG.png" />
+    <Content Include="Theme\js\wbox\wbox\titleBG0.png" />
+    <Content Include="Theme\js\wbox\wbox\titleBG1.png" />
+    <Content Include="Theme\js\wbox\wbox\wbox-min.css" />
+    <Content Include="Theme\js\wbox\wbox\wbox.css" />
+    <Content Include="Theme\js\wbox\wbox\wbox.gif" />
+    <Content Include="Theme\js\wbox\wbox\wbox.png" />
+    <Content Include="Theme\js\wbox\wbox\wbox2.gif" />
+    <Content Include="Theme\js\xml-framework.js" />
+    <Content Include="Theme\js\xml-validator.js" />
+    <Content Include="Theme\WebEasyPager\EasyPager.css" />
+    <Content Include="Theme\WebEasyPager\EasyPager.js" />
+    <Content Include="Theme\WebEasyPager\template.htm" />
+    <Content Include="Theme\zTree\css\awesomeStyle\awesome.css" />
+    <Content Include="Theme\zTree\css\awesomeStyle\img\loading.gif" />
+    <Content Include="Theme\zTree\css\demo.css" />
+    <Content Include="Theme\zTree\css\metroStyle\img\line_conn.png" />
+    <Content Include="Theme\zTree\css\metroStyle\img\loading.gif" />
+    <Content Include="Theme\zTree\css\metroStyle\img\metro.gif" />
+    <Content Include="Theme\zTree\css\metroStyle\img\metro.png" />
+    <Content Include="Theme\zTree\css\metroStyle\metroStyle.css" />
+    <Content Include="Theme\zTree\css\zTreeStyle\img\diy\1_close.png" />
+    <Content Include="Theme\zTree\css\zTreeStyle\img\diy\1_open.png" />
+    <Content Include="Theme\zTree\css\zTreeStyle\img\diy\2.png" />
+    <Content Include="Theme\zTree\css\zTreeStyle\img\diy\3.png" />
+    <Content Include="Theme\zTree\css\zTreeStyle\img\diy\4.png" />
+    <Content Include="Theme\zTree\css\zTreeStyle\img\diy\5.png" />
+    <Content Include="Theme\zTree\css\zTreeStyle\img\diy\6.png" />
+    <Content Include="Theme\zTree\css\zTreeStyle\img\diy\7.png" />
+    <Content Include="Theme\zTree\css\zTreeStyle\img\diy\8.png" />
+    <Content Include="Theme\zTree\css\zTreeStyle\img\diy\9.png" />
+    <Content Include="Theme\zTree\css\zTreeStyle\img\line_conn.gif" />
+    <Content Include="Theme\zTree\css\zTreeStyle\img\loading.gif" />
+    <Content Include="Theme\zTree\css\zTreeStyle\img\zTreeStandard.gif" />
+    <Content Include="Theme\zTree\css\zTreeStyle\img\zTreeStandard.png" />
+    <Content Include="Theme\zTree\css\zTreeStyle\zTreeStyle.css" />
+    <Content Include="Theme\zTree\js\jquery-1.4.4.min.js" />
+    <Content Include="Theme\zTree\js\jquery.ztree.all.js" />
+    <Content Include="Theme\zTree\js\jquery.ztree.all.min.js" />
+    <Content Include="Theme\zTree\js\jquery.ztree.core.js" />
+    <Content Include="Theme\zTree\js\jquery.ztree.core.min.js" />
+    <Content Include="Theme\zTree\js\jquery.ztree.excheck.js" />
+    <Content Include="Theme\zTree\js\jquery.ztree.excheck.min.js" />
+    <Content Include="Theme\zTree\js\jquery.ztree.exedit.js" />
+    <Content Include="Theme\zTree\js\jquery.ztree.exedit.min.js" />
+    <Content Include="Theme\zTree\js\jquery.ztree.exhide.js" />
+    <Content Include="Theme\zTree\js\jquery.ztree.exhide.min.js" />
+    <Content Include="UserControls\UC_Bottom.ascx" />
+    <Content Include="UserControls\UC_Left.ascx" />
+    <Content Include="UserControls\UC_Top.ascx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\BaseHttpHandler.cs" />
+    <Compile Include="Common\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SiteManager\NewsEdit.aspx.cs">
+      <DependentUpon>NewsEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteManager\NewsEdit.aspx.designer.cs">
+      <DependentUpon>NewsEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteManager\Service\NewsManager.ashx.cs">
+      <DependentUpon>NewsManager.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteManager\Service\UserManager.ashx.cs">
+      <DependentUpon>UserManager.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Theme\js\UEditor\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Theme\js\UEditor\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Theme\js\UEditor\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="UserControls\UC_Bottom.ascx.cs">
+      <DependentUpon>UC_Bottom.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Bottom.ascx.designer.cs">
+      <DependentUpon>UC_Bottom.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Left.ascx.cs">
+      <DependentUpon>UC_Left.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Left.ascx.designer.cs">
+      <DependentUpon>UC_Left.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Top.ascx.cs">
+      <DependentUpon>UC_Top.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Top.ascx.designer.cs">
+      <DependentUpon>UC_Top.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{47e7f912-0739-4d77-8caa-7af5bb7d191a}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Commons\Commons.csproj">
+      <Project>{9110a5b3-5fc3-4a80-85ab-24cc1fa35b31}</Project>
+      <Name>Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{3bf8a0c2-cd84-4c66-92d7-3eb25254712e}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Theme\js\UEditor\js\UEditor\" />
+    <Folder Include="Theme\js\UEditor\obj\Debug\TempPE\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2118</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2118/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

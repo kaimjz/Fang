@@ -1,0 +1,214 @@
+﻿/*
+div.pager
+{
+    text-align: right;
+    clear: both;
+    font-size: 12px;
+    padding-bottom: 3px;
+    margin: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 3px;
+    line-height:30px;
+    font-size:14px;
+}
+div.pager A
+{
+    border-bottom: #578d83 1px solid;
+    border-left: #578d83 1px solid;
+    padding-bottom: 2px;
+    margin: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #000;
+    border-top: #578d83 1px solid;
+    border-right: #578d83 1px solid;
+    text-decoration: none;
+    padding-top: 2px;
+}
+div.pager A:hover
+{
+    border-bottom: #000099 1px solid;
+    border-left: #000099 1px solid;
+    color: #000;
+    border-top: #000099 1px solid;
+    border-right: #000099 1px solid;
+}
+div.pager A:active
+{
+    border-bottom: #000099 1px solid;
+    border-left: #000099 1px solid;
+    color: #000;
+    border-top: #000099 1px solid;
+    border-right: #000099 1px solid;
+}
+div.pager SPAN.current
+{
+    border-bottom: #000099 1px solid;
+    border-left: #000099 1px solid;
+    padding-bottom: 2px;
+    background-color: #000099;
+    margin: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #fff;
+    border-top: #000099 1px solid;
+    font-weight: bold;
+    border-right: #000099 1px solid;
+    padding-top: 2px;
+}
+div.pager SPAN.disabled
+{
+    border-bottom: #578d83 1px solid;
+    font-size: 14px;
+    border-left: #578d83 1px solid;
+    padding-bottom: 2px;
+    margin: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #9f9696;
+    border-top: #578d83 1px solid;
+    border-right: #578d83 1px solid;
+    padding-top: 2px;
+}
+div.pager SPAN.abled
+{
+    border-bottom: #578d83 1px solid;
+    font-size: 14px;
+    border-left: #578d83 1px solid;
+    padding-bottom: 2px;
+    margin: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #578d83;
+    border-top: #578d83 1px solid;
+    border-right: #578d83 1px solid;
+    padding-top: 2px;
+}
+
+#P_First, #P_Last, #P_Prev, #P_Next, #P_GO, #S_First, #S_Last, #S_Prev, #S_Next
+{
+    border: #000099 0px solid;
+}
+#S_First:hover, #S_Last:hover, #S_Prev:hover, #S_Next:hover
+{
+    color: #0da4dc;
+}
+#P_GO
+{
+    text-align: center;
+    font-size: 14px;
+    height: 40px;
+    width: 50px;
+    background-color: #45c5f6;
+    color: #056598;
+}
+#P_GO:hover
+{
+    text-align: center;
+    font-size: 14px;
+    height: 40px;
+    width: 50px;
+    background-color: #0da4dc;
+    color: #fff;
+}
+*/
+div.pager
+{
+    text-align: right;
+    clear: both;
+    font-size: 14px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+div.pager A
+{
+    padding-bottom: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: #000;
+    text-decoration: none;
+    padding-top: 8px;
+    cursor:pointer !important;
+}
+div.pager A:hover
+{
+    color: #578d83;
+    border-top: 3px solid #578d83;
+}
+div.pager A:active
+{
+    color: #578d83;
+    border-top: 3px solid #578d83;
+}
+
+#nnow
+{
+    border-top: 3px solid #578d83;
+}
+
+div.pager SPAN.current
+{
+    padding-bottom: 2px;
+    background-color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #fff;
+    font-weight: bold;
+    padding-top: 7px;
+}
+div.pager SPAN.disabled
+{
+    font-size: 14px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 7px;
+    cursor:pointer !important;
+}
+div.pager SPAN.abled
+{
+    font-size: 14px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #578d83;
+    padding-top: 7px;
+}
+
+#P_First, #P_Last, #P_Prev, #P_Next, #P_GO, #S_First, #S_Last, #S_Prev, #S_Next
+{
+    color: #000;
+    border: #000099 0px solid;
+}
+#S_First:hover, #S_Last:hover, #S_Prev:hover, #S_Next:hover
+{
+
+    /*font-size:10;*/  /* zfj 2015-6-23 注释  样式影响列表*/   
+    color: #578d83;
+    border-top: 3px solid #578d83;
+}
+#P_GO
+{
+    text-align: center;
+    font-size: 12px;
+    /*height: 40px;
+    width: 50px;*/
+    background-color: #578d83;
+    color: #fff;
+    padding:3px;
+}
+#P_GO:hover
+{
+    text-align: center;
+    font-size: 12px;
+    /*height: 40px;
+    width: 50px;*/
+    background-color: #578d83;
+    color: #27CDB4;
+    padding:3px;
+}
+#Txt_GO {
+    width:25px;
+}

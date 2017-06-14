@@ -1,0 +1,10 @@
+E:\Git\Code\Commons\bin\Debug\Commons.dll
+E:\Git\Code\Commons\bin\Debug\Commons.pdb
+E:\Git\Code\Commons\obj\Debug\Commons.dll
+E:\Git\Code\Commons\obj\Debug\Commons.pdb
+E:\Git\Code\Commons\obj\Debug\Commons.csprojResolveAssemblyReference.cache
+E:\Git\Fang\Commons\bin\Debug\Commons.dll
+E:\Git\Fang\Commons\bin\Debug\Commons.pdb
+E:\Git\Fang\Commons\obj\Debug\Commons.csprojResolveAssemblyReference.cache
+E:\Git\Fang\Commons\obj\Debug\Commons.dll
+E:\Git\Fang\Commons\obj\Debug\Commons.pdb

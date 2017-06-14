@@ -1,0 +1,34 @@
+/* CSS Document */
+/*公共样式*/
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, a, span {border:0 none;margin:0;padding:0;}
+.clear{ clear:both;}
+hr{border:1px solid #c7c7c7;}
+ul,li{ list-style-type:none;}
+a:link, a:visited {}
+a:hover, a:active {}
+body{ font-size:12px; background:#fcfcfc;}
+body a{ text-decoration:none;}
+table { border-collapse: collapse; border-spacing: 0;}
+body{ }
+/*登录页面*/
+.login_bg{ width:100%; height:970px; margin:0 auto; background-size:100%;-webkit-background-size:100%;}
+.login_heng{ width:100%; height:8px; margin:0 auto; background:#ca0a15;}
+.login{ width:1200px;height:800px;margin:0 auto; background:url(../images/login1.png) top center no-repeat; text-align:center; margin-top:-8px; position:relative;}
+.login-logo{ position:absolute; left:0px; top:105px; width:100%; text-align:center;}
+.login-title{ position:absolute; left:0px; top:375px; width:100%; text-align:center; font-family:"微软雅黑"; font-size:22px;}
+.login-imput1{ position:absolute; left:561px; top:430px; width:155px; height:28px;}
+.login-imput1 input{ width:155px; height:28px; border:none; background:#f3f3f3;}
+.login-name{ position:absolute; left:490px; top:433px; width:70px; height:28px; font-size:16px; font-family:"微软雅黑"; color:#707070;}
+.login-imput2{ position:absolute; left:561px; top:485px; width:155px; height:28px;}
+.login-imput2 input{ width:155px; height:28px; border:none; background:#f3f3f3;}
+.login-password{ position:absolute; left:490px; top:488px; width:70px; height:28px; font-size:16px; font-family:"微软雅黑"; color:#707070;}
+.login-imput3{ position:absolute; left:561px; top:539px; width:60px; height:28px;}
+.login-imput3 input{ width:60px; height:28px;border:none; background:#f3f3f3;}
+.login-code{ position:absolute; left:490px; top:542px; width:70px; height:28px; font-size:16px; font-family:"微软雅黑"; color:#707070;}
+.login-imput4{ position:absolute; left:645px; top:537px; width:78px; height:35px;}
+.login-imput5{ position:absolute; left:480px; top:590px; width:144px; height:35px;}
+.login-imput5 a{ display:block; width:146px; height:44px; line-height:44px; background:url(../images/login_button.png) 0 0 no-repeat; color:#000; font-size:18px; font-family:"微软雅黑"; }
+.login-imput5 a:hover{ color:#000;background:url(../images/login_button.png) 0 -44px no-repeat;}
+.login-imput6{ position:absolute; left:635px; top:595px; width:105px; height:35px;}
+.login-imput6 a{ width:105px; height:35px; text-align:center; line-height:35px;font-size:16px; font-family:"微软雅黑"; color:#146cb3;}
+.login-imput6 a:hover{ color:#000;}
